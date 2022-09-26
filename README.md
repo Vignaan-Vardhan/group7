@@ -6,3 +6,11 @@ Amar Thoodupunoori - amar-thodupunoori - Developer
 Kanduri Abhilash - kanduriabhilash5389 - Tester and Analyst
 
 Vignaan Vardhan Nampalli - Vignaan-Vardhan - Developer
+
+
+Technologies : 
+
+Front End - Java Script
+
+Back End - Java Script
+
