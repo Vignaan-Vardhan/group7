@@ -14,3 +14,8 @@ Front End - Java Script
 
 Back End - Java Script
 
+
+Description : 
+
+We are going to build an application where a user can login with his username, password. Watch the news feed, messages and also share the photos across in the application.
+
