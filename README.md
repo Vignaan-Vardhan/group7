@@ -28,3 +28,13 @@ Objectives :
 3)Groups : A user can create a group by selecting the people in the application
 
 4)Friend request : A user send a friend request to other person in the application.
+
+Features:
+
+1)Messaging 
+
+2)News Feed
+
+3)Login
+
+4)Friend Requests
