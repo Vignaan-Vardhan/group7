@@ -19,3 +19,12 @@ Description :
 
 We are going to build an application where a user can login with his username, password. Watch the news feed, messages and also share the photos across in the application.
 
+Objectives : 
+
+1)Messaging service : Users are offered a service where one can interact with other on the platform 
+
+2)News Feed : A user can see the photos that are posted by other users in the application
+
+3)Groups : A user can create a group by selecting the people in the application
+
+4)Friend request : A user send a friend request to other person in the application.
