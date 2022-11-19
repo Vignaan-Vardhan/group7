@@ -12,11 +12,32 @@ import { HanldleErr } from '../../Utils/Utils';
 import Loading from '../../Assets/images/loading.gif';
 import { Link } from 'react-router-dom';
 import { FollowingPosts } from '../../Apis/Post';
+import { useNavigate } from 'react-router-dom';
+
 const Home = () => {
-    const [createPost , setCreatePost] = useState(false);
+    const [showPopUp, setShowPopUp] = useState(false);
     const {UserGState , dispatchUser , PostGState , disptachPost} = useContext(AppContenxt);
+    const navigate = useNavigate();
+    const showPopupHandler = () =>{
+    setShowPopUp(true);
+    dispatchUser({type:"Logout"});
+    navigate('/login');
+} 
+    const [createPost , setCreatePost] = useState(false);
+    
     const [Waiting , setWaiting ] = useState(false)
     window.onclick = () => {setCreatePost(false)}
+    useEffect(() => {
+        const timer = setTimeout(() => {
+        setShowPopUp(true);
+      }, 5000);
+     return () => clearTimeout(timer);
+     }, [showPopUp]);
+     let popup = null;
+     if(showPopUp) {
+       popup = <p>You have inactive for more than 5 seconds</p>;
+      }
+
     useEffect(() => {
             (async() =>{
                 setWaiting(true);
@@ -36,6 +57,8 @@ const Home = () => {
     return(
         <Box className='Home' style={{background: "#F2F3F5",minHeight:"100vh" , height:'100%'}}>
             {createPost&& <CreatePost Open = {setCreatePost} />}
+            {popup}
+            {popup && <button onClick={showPopupHandler}>Logout from Here</button>}
             <Navbar />
             <Grid container>
                 <Grid item xs={12} md={3}>
