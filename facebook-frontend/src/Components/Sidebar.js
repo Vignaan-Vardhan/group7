@@ -8,9 +8,9 @@ import { useNavigate } from 'react-router-dom';
 const Sidebar = () => {
     const {UserGState , dispatchUser} = useContext(AppContenxt)
     const navigate = useNavigate();
-    //logout function
+    // function
     const Logout = () => {
-        dispatchUser({type:"LOGOUT"})
+        dispatchUser({type:"Logout"})
         navigate('/login');
     }
     return(
@@ -48,7 +48,7 @@ const Sidebar = () => {
                 </ListItem>
                 <ListItem button onClick={Logout}>
                     <ExitToAppIcon/>
-                    <Typography variant="subtitle1">Logout</Typography>
+                    <Typography variant="subtitle1"></Typography>
                 </ListItem>
             </List>
         </Box>
