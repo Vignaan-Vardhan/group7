@@ -1,1 +1,1 @@
-This is the document for test case
+TEST CASES are found in this repository
